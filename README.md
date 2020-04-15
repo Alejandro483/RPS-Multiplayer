@@ -11,4 +11,4 @@ This is my assignment for bootcamp. A Rock Paper Scissors game will be completel
 
   * Throw some chat functionality in there! No online multiplayer game is complete without having to endure endless taunts and insults from your jerk opponent.
   
-  *Ejoy.
+  *Enjoy.
