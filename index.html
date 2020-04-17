@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/assets/style.css"></link>
   </head>
   <body>
-    <div>
+    <div id="user-form">
       <form>
         <div class="form-group">
           <label for="content">User Name</label>
@@ -42,7 +42,12 @@
         <div id="p2-choice">player2 choice</div>
         <div id="wins/losses2">player2 record</div>
       </div>
-
+<div id="instrutions">
+    <p>1. Pick you choice from: Rock, Paper or scissors.
+       2. Click the button of your choice.
+       3. Wait for the opponent's choice.
+    </p>
+</div>
       <div id="results">results</div>
 
       <div id="chat">
@@ -66,12 +71,13 @@
     </div>
   </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+  <!-- Firebase Core JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+
+   <!-- Specific Firebase products we want -->
+   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
 
     <script src="/assets/JavaScript.js"></script>
 </html>
