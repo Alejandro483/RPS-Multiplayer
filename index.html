@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS Multiplayer</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/style.css"></link>
+  </head>
+  <body>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="content">User Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userName"
+            aria-describedby="userName"
+            placeholder="Type here your name"
+          />
+        </div>
+
+        <button id="start" type="submit" class="btn btn-primary">start</button>
+      </form>
+    </div>
+
+    <div id="game">
+      <div id="player1">
+        <h1>Player1</h1>
+        <div id="p1-choice">player1 choice</div>
+        <div id="wins/losses1">player1 record</div>
+      </div>
+
+      <div id="player2">
+        <h1>Player2</h1>
+        <div id="p2-choice">player2 choice</div>
+        <div id="wins/losses2">player2 record</div>
+      </div>
+
+      <div id="results">results</div>
+
+      <div id="chat">
+        chat
+        <div id="messages">messages</div>
+        <form>
+          <div class="form-group">
+            <label for="content">Chat content</label>
+            <input
+              type="text"
+              class="form-control"
+              id="chatContent"
+              aria-describedby="chatContent"
+              placeholder="Type here"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+
+    <script src="/assets/JavaScript.js"></script>
+</html>
