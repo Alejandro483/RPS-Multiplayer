@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="/assets/style.css"></link>
   </head>
   <body>
+    <header>
+      <h1 id="header">Rock / Paper / Scissors</h1>
+    </header>
     <div id="user-form">
       <form>
         <div class="form-group">
@@ -34,7 +37,7 @@
       <div id="player1">
         <h1>Player1</h1>
         <div id="p1-choice">player1 choice</div>
-        <div id="wins/losses1">player1 record</div>
+        <div id="winslosses1">player1 record</div>
       </div>
 
       <div id="player2">
@@ -43,19 +46,21 @@
         <div id="wins/losses2">player2 record</div>
       </div>
 <div id="instrutions">
-    <p>1. Pick you choice from: Rock, Paper or scissors.
-       2. Click the button of your choice.
-       3. Wait for the opponent's choice.
-    </p>
+  <h3>Instructions</h3>
+    <ol>
+      <li> Pick you choice from: Rock, Paper or scissors.</li>
+      <li>Click the button of your choice.</li>
+        <li> Wait for the opponent's choice.</li>
+    </ol>
 </div>
       <div id="results">results</div>
 
       <div id="chat">
-        chat
-        <div id="messages">messages</div>
+        Chat
+        <!-- <div id="messages">messages</div> -->
         <form>
           <div class="form-group">
-            <label for="content">Chat content</label>
+            <label for="content"></label>
             <input
               type="text"
               class="form-control"
