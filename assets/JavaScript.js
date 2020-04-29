@@ -1,6 +1,5 @@
 $(document).ready(function () {
- 
- // INIT FIREBASE
+  // INIT FIREBASE
   var firebaseConfig = {
     apiKey: "AIzaSyCPgyNvjE0lkWCW6lQcygqfER3eOYJBMyA",
     authDomain: "rps-app-d104d.firebaseapp.com",
@@ -12,10 +11,9 @@ $(document).ready(function () {
     measurementId: "G-M6T3VZSYH9",
   };
 
-  
   firebase.initializeApp(firebaseConfig);
 
-// GLOBAL VARIABLES
+  // GLOBAL VARIABLES
   var database = firebase.database();
   var numUsers = null;
   var user1 = null;
@@ -26,7 +24,6 @@ $(document).ready(function () {
   var currentUsers = null;
   var userObj = {};
   var activeUser = null;
-  
 
   // FUNCTION THAT UPDATES THE DATABASE IN REAL TIME
   usersRef.on("value", function (snapshot) {
@@ -38,7 +35,7 @@ $(document).ready(function () {
     console.log(data);
     console.log(data.player1);
     console.log(data.player2);
-    
+
     // ASSIGNING PLAYERS TO THE GAME
     if (data.player1) {
       $("#player1 h1").text(data.player1);
@@ -100,8 +97,8 @@ $(document).ready(function () {
 
     alert(gameChoice);
   }
-  
 
+  // CREATE BUTTONS DYNAMICALLY
   function renderButtons(choice, playerNum) {
     var btn = $("<button>");
 
@@ -110,8 +107,15 @@ $(document).ready(function () {
     btn.text(choice);
     $(playerNum).append(btn);
   }
-  // if (btn).on("click", function (event) {
-  //   event.preventDefault();
-  //   alert(gameChoice);
-  // })
+// BUTTONS CLICK THE USERS CHOICE
+  $(document).on("click", ".choice", function () {
+    var choice = $(this).attr("data-choice");
+    console.log(choice);
+
+    var myObj = {
+      player1Choice: choice,
+    };
+    console.log(Object.keys(userObj));
+    database.ref("users").update(myObj);
+  });
 });
